@@ -1,8 +1,8 @@
-import LangSwitcher from "components/LanguageSwitcher/LangSwitcher";
-import { NavLink } from "react-router-dom";
-import useLang from "../../shared/useLang";
-import locale from "./locale.json";
-import styles from "./navbar.module.css";
+import LangSwitcher from 'components/LanguageSwitcher/LangSwitcher';
+import { NavLink } from 'react-router-dom';
+import useLang from '../../shared/useLang';
+import locale from './locale.json';
+import styles from './navbar.module.css';
 
 const getFullName = ({ isActive }) => {
   return isActive ? `${styles.link} ${styles.active}` : styles.link;
@@ -19,6 +19,8 @@ const Navbar = () => {
   const counterUseRed = locale.counterUseRed[lang];
   const friends = locale.friends[lang];
   const ref = locale.ref[lang];
+  const tabsclass = locale.tabsclass[lang];
+  const tabs = locale.tabs[lang];
   return (
     <div>
       <header>
@@ -47,6 +49,12 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="/useRef" className={getFullName}>
             {ref}
+          </NavLink>
+          <NavLink to="/tabsclass" className={getFullName}>
+            {tabsclass}
+          </NavLink>
+          <NavLink to="/tabsfunc" className={getFullName}>
+            {tabs}
           </NavLink>
         </nav>
       </header>

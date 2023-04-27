@@ -30,5 +30,13 @@
   "ref": {
     "ua": "ЮзРеф",
     "en": "UseRef"
+  },
+  "tabsclass": {
+    "ua": "ТабКласс",
+    "en": "TabsClass"
+  },
+  "tabs": {
+    "ua": "Таб",
+    "en": "Tabs"
   }
 }
