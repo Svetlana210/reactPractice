@@ -1,0 +1,14 @@
+{
+  "email": {
+    "ua": "Пошта",
+    "en": "Email"
+  },
+  "password": {
+    "ua": "Пароль",
+    "en": "Password"
+  },
+  "btn": {
+    "ua": "зареєструватись",
+    "en": "log in"
+  }
+}

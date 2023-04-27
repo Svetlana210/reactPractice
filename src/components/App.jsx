@@ -1,16 +1,18 @@
-export const App = () => {
+// import { Route, Routes } from "react-router-dom";
+// import AppBar from "./components/AppBar/AppBar";
+// import SignupForm from "./components/SignupForm/SignupForm";
+import UserRoutes from "./Routes";
+import Navbar from "./Navbar/Navbar";
+import LangContext from "../shared/langContext.js";
+import styles from "./app.module.css";
+
+export default function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <LangContext>
+      <div className={styles.container}>
+        <Navbar />
+        <UserRoutes />
+      </div>
+    </LangContext>
   );
-};
+}

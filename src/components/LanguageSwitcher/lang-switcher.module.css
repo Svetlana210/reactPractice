@@ -1,0 +1,12 @@
+.container {
+  margin-bottom: 10px;
+}
+.lang {
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.currentLang {
+  composes: lang;
+  font-weight: bold;
+}
