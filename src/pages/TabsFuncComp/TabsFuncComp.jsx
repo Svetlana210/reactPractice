@@ -1,18 +1,19 @@
 import { useState } from 'react';
+import Content from './Content';
 
 const Tabs = ({ items }) => {
   const [state, setState] = useState({ activeIdx: 0 });
 
   const activeTab = items[state.activeIdx];
 
-  const mutate = obj => {
-    setState(prevState => {
-      console.log(prevState.activeIdx === obj.activeIdx);
-      if (prevState.activeIdx === obj.activeIdx) return prevState;
-      return obj;
-    });
-  };
-  console.log('render');
+  // const mutate = obj => {
+  //   setState(prevState => {
+  //     console.log(prevState.activeIdx === obj.activeIdx);
+  //     if (prevState.activeIdx === obj.activeIdx) return prevState;
+  //     return obj;
+  //   });
+  // };
+
   return (
     <>
       <div>
@@ -20,16 +21,13 @@ const Tabs = ({ items }) => {
           <button
             type="button"
             key={item.label}
-            onClick={() => mutate({ activeIdx: idx })}
+            onClick={() => setState({ activeIdx: idx })}
           >
             {item.label}
           </button>
         ))}
       </div>
-      <div>
-        <h2>{activeTab.label}</h2>
-        <p>{activeTab.content}</p>
-      </div>
+      <Content activeTab={activeTab} />
     </>
   );
 };
